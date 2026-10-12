@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>✨ Feliz XV Años Sonia ✨</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            overflow-x: hidden;
+
+            background:
+                radial-gradient(circle at 15% 20%, #4b174d 0%, transparent 30%),
+                radial-gradient(circle at 85% 70%, #31205f 0%, transparent 30%),
+                linear-gradient(135deg, #100714, #1c0c25, #0d0817);
+        }
+
+        /* =================================
+        FONDO
+        ================================= */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            z-index: -10;
+            overflow: hidden;
+        }
+
+        .glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: .35;
+        }
+
+        .glow1 {
+            width: 350px;
+            height: 350px;
+            background: #d946ef;
+            left: -150px;
+            top: 10%;
+        }
+
+        .glow2 {
+            width: 400px;
+            height: 400px;
+            background: #6366f1;
+            right: -150px;
+            bottom: 10%;
+        }
+
+        /* =================================
+        ESTRELLAS
+        ================================= */
+
+        .stars {
+            position: fixed;
+            inset: 0;
+            z-index: -5;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #fff;
+
+            animation: brillar 2s infinite alternate;
+        }
+
+        @keyframes brillar {
+            from {
+                opacity: .15;
+                transform: scale(.5);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1.4);
+            }
+        }
+
+        /* =================================
+        MENÚ
+        ================================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+
+            padding: 18px;
+
+            background: rgba(10, 5, 15, .6);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid rgba(255,255,255,.1);
+
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: #f5c2ff;
+        }
+
+        /* =================================
+        SECCIONES
+        ================================= */
+
+        section {
+            position: relative;
+            z-index: 2;
+
+            padding: 110px 20px;
+
+            text-align: center;
+        }
+
+        /* =================================
+        PORTADA
+        ================================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 100px 20px 50px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+
+            animation:
+                aparecer 1.5s ease;
+        }
+
+        @keyframes aparecer {
+
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .crown {
+            font-size: 55px;
+
+            animation:
+                crownFloat 2s ease-in-out infinite;
+        }
+
+        @keyframes crownFloat {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .eyebrow {
+            margin-top: 10px;
+
+            color: #e8c8f1;
+
+            font-size: 13px;
+
+            letter-spacing: 7px;
+
+            text-transform: uppercase;
+        }
+
+        .xv {
+            margin-top: 20px;
+
+            font-size: clamp(25px, 5vw, 48px);
+
+            letter-spacing: 12px;
+
+            font-weight: 300;
+        }
+
+        .hero h1 {
+            font-family: 'Great Vibes', cursive;
+
+            font-size: clamp(100px, 19vw, 200px);
+
+            line-height: .9;
+
+            margin: 20px 0;
+
+            color: #f1b8ff;
+
+            text-shadow:
+                0 0 10px #d946ef,
+                0 0 30px #a855f7,
+                0 0 70px #7c3aed;
+        }
+
+        .hero p {
+            max-width: 650px;
+
+            margin: 30px auto;
+
+            color: #ded1e2;
+
+            line-height: 1.8;
+        }
+
+        /* =================================
+        BOTONES
+        ================================= */
+
+        .btn {
+            border: none;
+
+            padding: 15px 30px;
+
+            margin: 8px;
+
+            border-radius: 50px;
+
+            color: white;
+
+            font-family: inherit;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #a855f7,
+                    #ec4899
+                );
+
+            cursor: pointer;
+
+            transition: .3s;
+
+            box-shadow:
+                0 0 25px rgba(168,85,247,.3);
+        }
+
+        .btn:hover {
+            transform:
+                translateY(-5px)
+                scale(1.04);
+
+            box-shadow:
+                0 10px 40px rgba(168,85,247,.5);
+        }
+
+        /* =================================
+        TÍTULOS
+        ================================= */
+
+        .section-title {
+            font-family: 'Great Vibes', cursive;
+
+            font-size: clamp(55px, 9vw, 80px);
+
+            color: #e8b4ff;
+
+            margin-bottom: 15px;
+
+            text-shadow:
+                0 0 20px rgba(168,85,247,.4);
+        }
+
+        .section-text {
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #cfc0d4;
+
+            line-height: 1.9;
+        }
+
+        /* =================================
+        CARTA
+        ================================= */
+
+        .letter-container {
+            max-width: 900px;
+
+            margin: 50px auto 0;
+        }
+
+        .invitation {
+            padding: 35px 25px;
+
+            border-radius: 25px;
+
+            cursor: pointer;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(168,85,247,.2),
+                    rgba(236,72,153,.15)
+                );
+
+            border:
+                1px solid rgba(255,255,255,.12);
+
+            backdrop-filter:
+                blur(15px);
+
+            transition: .4s;
+        }
+
+        .invitation:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 20px 60px rgba(0,0,0,.3);
+        }
+
+        .invitation-icon {
+            font-size: 65px;
+
+            margin-bottom: 15px;
+        }
+
+        .invitation h3 {
+            font-size: 19px;
+
+            font-weight: 500;
+        }
+
+        .invitation small {
+            display: block;
+
+            margin-top: 8px;
+
+            color: #c9b7d0;
+        }
+
+        .letter {
+            max-height: 0;
+
+            overflow: hidden;
+
+            opacity: 0;
+
+            margin-top: 20px;
+
+            border-radius: 25px;
+
+            background: #fff9fd;
+
+            color: #432d46;
+
+            text-align: left;
+
+            transition:
+                max-height 1s ease,
+                padding 1s ease,
+                opacity .5s ease;
+        }
+
+        .letter.open {
+            max-height: 2100px;
+
+            padding: 35px;
+
+            opacity: 1;
+        }
+
+        .letter h2 {
+            font-family: 'Great Vibes', cursive;
+
+            text-align: center;
+
+            font-size: 50px;
+
+            color: #9333a5;
+
+            margin-bottom: 20px;
+        }
+
+        .letter p {
+            line-height: 1.9;
+
+            margin-bottom: 15px;
+        }
+
+        .signature {
+            text-align: right;
+
+            font-family: 'Great Vibes', cursive;
+
+            font-size: 35px;
+
+            color: #9333a5;
+        }
+
+        /* =================================
+        TARJETAS
+        ================================= */
+
+        .cards {
+            max-width: 1000px;
+
+            margin: 50px auto 0;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .card {
+            padding: 30px 20px;
+
+            border-radius: 25px;
+
+            background:
+                rgba(255,255,255,.06);
+
+            border:
+                1px solid rgba(255,255,255,.1);
+
+            backdrop-filter:
+                blur(12px);
+
+            transition: .4s;
+        }
+
+        .card:hover {
+            transform:
+                translateY(-10px);
+
+            background:
+                rgba(168,85,247,.12);
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,.25);
+        }
+
+        .card-icon {
+            font-size: 50px;
+
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #e4b7ff;
+
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #c6b7c9;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+        /* =================================
+        NÚMEROS
+        ================================= */
+
+        .numbers {
+            max-width: 850px;
+
+            margin: 50px auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap: 15px;
+        }
+
+        .number-box {
+            padding: 25px 10px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,.06);
+
+            border:
+                1px solid rgba(255,255,255,.1);
+        }
+
+        .number-box span {
+            display: block;
+
+            font-size: 42px;
+
+            font-weight: 600;
+
+            color: #df9eff;
+        }
+
+        .number-box small {
+            color: #bcaec0;
+        }
+
+        /* =================================
+        MÚSICA
+        ================================= */
+
+        .music {
+            position: fixed;
+
+            right: 20px;
+            bottom: 20px;
+
+            width: 65px;
+            height: 65px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #8b5cf6,
+                    #ec4899
+                );
+
+            color: white;
+
+            font-size: 25px;
+
+            cursor: pointer;
+
+            z-index: 2000;
+
+            box-shadow:
+                0 0 30px
+                rgba(168,85,247,.5);
+        }
+
+        .music-playing {
+            animation:
+                musicPulse 1s infinite alternate;
+        }
+
+        @keyframes musicPulse {
+
+            from {
+                box-shadow:
+                    0 0 15px #a855f7;
+            }
+
+            to {
+                box-shadow:
+                    0 0 45px #ec4899;
+            }
+        }
+
+        /* =================================
+        CONFETI
+        ================================= */
+
+        .confetti {
+            position: fixed;
+
+            top: -30px;
+
+            width: 9px;
+            height: 18px;
+
+            z-index: 3000;
+
+            pointer-events: none;
+
+            animation:
+                caer linear forwards;
+        }
+
+        @keyframes caer {
+
+            to {
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+            }
+        }
+
+        /* =================================
+        ESTRELLAS FLOTANTES
+        ================================= */
+
+        .floating {
+            position: fixed;
+
+            bottom: -40px;
+
+            z-index: 1500;
+
+            pointer-events: none;
+
+            animation:
+                subir linear forwards;
+        }
+
+        @keyframes subir {
+
+            from {
+                transform:
+                    translateY(0)
+                    rotate(0);
+                opacity: 1;
+            }
+
+            to {
+                transform:
+                    translateY(-110vh)
+                    rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* =================================
+        FOOTER
+        ================================= */
+
+        footer {
+            padding: 60px 20px;
+
+            text-align: center;
+
+            color: #9f90a4;
+        }
+
+        footer strong {
+            color: #df9eff;
+        }
+
+        /* =================================
+        CELULAR
+        ================================= */
+
+        @media(max-width: 800px) {
+
+            nav {
+                gap: 18px;
+            }
+
+            nav a {
+                font-size: 11px;
+            }
+
+            .cards {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .numbers {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+        }
+
+        @media(max-width: 500px) {
+
+            nav {
+                display: none;
+            }
+
+            section {
+                padding: 80px 15px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .letter.open {
+                padding: 25px 20px;
+            }
+
+            .letter h2 {
+                font-size: 42px;
+            }
+
+            .hero .xv {
+                letter-spacing: 6px;
+            }
+
+            .btn {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =================================
+        FONDO
+    ================================= -->
+
+    <div class="background">
+
+        <div class="glow glow1"></div>
+
+        <div class="glow glow2"></div>
+
+    </div>
+
+    <div
+        class="stars"
+        id="stars">
+    </div>
+
+
+    <!-- =================================
+        MENÚ
+    ================================= -->
+
+    <nav>
+
+        <a href="#inicio">
+            Inicio
+        </a>
+
+        <a href="#carta">
+            Carta
+        </a>
+
+        <a href="#momentos">
+            Mis XV
+        </a>
+
+        <a href="#final">
+            Celebración
+        </a>
+
+    </nav>
+
+
+    <!-- =================================
+        MÚSICA
+    ================================= -->
+
+    <audio
+        id="music"
+        loop>
+
+        <source
+            src="C:\Users\admin\OneDrive\Desktop\XV Años\Mi bella Evangeline Karaoke 2026.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+    <button
+        class="music"
+        id="musicButton"
+        onclick="toggleMusic()">
+
+        🎵
+
+    </button>
+
+
+    <!-- =================================
+        INICIO
+    ================================= -->
+
+    <section
+        class="hero"
+        id="inicio">
+
+        <div class="hero-content">
+
+            <div class="crown">
+                👑
+            </div>
+
+            <div class="eyebrow">
+                Una noche mágica
+            </div>
+
+            <div class="xv">
+                MIS XV AÑOS
+            </div>
+
+            <h1>
+                Sonia Naydelin Castro Lopez
+            </h1>
+
+            <p>
+                ✨ Hoy comienza una nueva etapa de su vida,
+                llena de sueños, aventuras, aprendizajes
+                y momentos inolvidables. ✨
+            </p>
+
+            <button
+                class="btn"
+                onclick="openLetterAndScroll()">
+
+                📜 Mi carta
+
+            </button>
+
+            <button
+                class="btn"
+                onclick="celebrate()">
+
+                🎆 Celebrar mis XV
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+        CARTA
+    ================================= -->
+
+    <section id="carta">
+
+        <h2 class="section-title">
+            Un mensaje especial
+        </h2>
+
+        <p class="section-text">
+            Una pequeña carta para recordar este día
+            tan importante. 👑✨
+        </p>
+
+        <div class="letter-container">
+
+            <div
+                class="invitation"
+                onclick="openLetter()">
+
+                <div class="invitation-icon">
+                    📜
+                </div>
+
+                <h3>
+                    Toca para abrir
+                </h3>
+
+                <small>
+                    Hay unas palabras para ti...
+                </small>
+
+            </div>
+
+
+            <div
+                class="letter"
+                id="letter">
+
+                <h2>
+                    Querida Sonia ✨
+                </h2>
+
+                <p>
+                    Hoy es un día que quedará guardado para siempre en su corazón. 
+                    Hoy celebra sus quince años, una etapa que marca el comienzo de un nuevo capítulo en su vida. 
+                    Quizás ahora solo vea un vestido, una fiesta, fotografías, música y personas celebrando con usted, 
+                    pero detrás de todo eso hay algo mucho más grande: está dejando atrás una parte de tu niñez para comenzar
+                    a descubrir, poco a poco, la maravillosa persona en la que te estás convirtiendo.
+                </p>
+
+                <p>
+                    Quiero que sepa que llegar hasta este momento no ha sido solamente cumplir años. Ha sido crecer, aprender, 
+                    caer, levantarte, reír, llorar, conocer personas, descubrir sus gustos, formar tus sueños y comenzar a entender 
+                    quién es y quién quiere llegar a ser. Tal vez todavía tenga muchas preguntas sobre su futuro, y 
+                    está bien. No tiene que tener todas las respuestas ahora. Tiene toda una vida por delante para descubrirlas.
+                </p>
+
+                <p>
+                    A partir de hoy vendrán momentos hermosos, pero también habrá días difíciles. Habrá ocasiones en las que sentirá que 
+                    todo está saliendo bien y otras en las que quizás no sabrá qué camino tomar. Cuando eso suceda, recuerde algo muy 
+                    importante: no tenga miedo de equivocarte. Los errores no la hacen menos valiosa; le enseñan, le hacen crecer y 
+                    ayudan a convertirse en una persona más fuerte.
+                </p>
+
+                <p>
+                    Nunca permita que alguien le haga creer que no es suficiente. No necesita cambiar su forma de ser para agradarle 
+                    a los demás. Su valor no depende de su apariencia, de sus logros, de la cantidad de personas que la quieran o de 
+                    lo que otros piensen de usted. Su valor está en quien eres, en su corazón, en sus sentimientos, en su manera de tratar 
+                    a los demás y en la capacidad que tiene de seguir adelante incluso cuando las cosas se ponen difíciles.
+                </p>
+
+                <p>
+                    Sueñe en grande. Sueñe con viajar, estudiar, conocer el mundo, formar una familia si algún día lo desea, alcanzar 
+                    sus metas y convertirse en la mujer que imagina. Y cuando alguien le diga que no puede, recuerde que muchas veces 
+                    las personas hablan desde sus propios límites, no desde los suyos. Usted conoce sus capacidades y trabaje 
+                    por aquello que realmente quiere.
+                </p>
+
+                <p>
+                    También quiero pedirle que nunca olvide a las personas que han estado con usted en el camino. A su familia, a quienes la han 
+                    cuidado, aconsejado, abrazado y acompañado en cada etapa. Quizás algún día entienda mucho más profundamente todos los sacrificios 
+                    que hicieron por usted y cuánto amor hay detrás de cada consejo, cada preocupación y cada abrazo.
+
+                <p>
+                    Disfrute muchísimo esta etapa. Ría hasta que le duela el estómago, tome fotografías, crea recuerdos, abraze fuerte a las personas 
+                    que ama y aproveche cada momento. El tiempo pasa más rápido de lo que imaginamos, y algún día mira hacia atrás y recordará con cariño 
+                    a la niña que fue y sentirá orgullo de la mujer en la que se convertira.
+                </p>
+
+                <p>
+                    Nunca tenga prisa por crecer. Aunque hoy estés celebrando sus quince años, todavía tiene derecho a equivocarte, a aprender, a jugar, 
+                    a emocionarte por pequeñas cosas y a disfrutar de su juventud. Crecer no significa dejar de ser usted; significa aprender a conocerse y quererse
+                    cada día un poco más.
+                </p>
+
+                <p>
+                    Deseo que la vida le regale personas sinceras, amistades verdaderas y un amor que la respete, la valore y le sea fiel para toda la vida. Deseo que tenga
+                    la fuerza para alejarse de todo aquello que le haga daño y la sabiduría para reconocer lo que realmente merece quedarse en su vida.
+                </p>
+
+                <p>
+                    Y, sobre todo, deseo que nunca pierda la capacidad de ser feliz. Que aun en los días grises encuentre una pequeña razón para sonreír. 
+                    Que cuando tenga miedo recuerde todo lo que ya ha superado. Que cuando dude de usted misma recuerde que es mucho más fuerte de lo que imagina.
+                </p>
+
+                <p>
+                    Hoy todos celebran sus quince años, pero yo espero que algún día, cuando sea mucho mayor, pueda mirar hacia atrás y decir: “Viví, soñé, amé, aprendí y fui feliz”
+                </p>
+
+                <p>
+                    Que Dios cuide siempre sus pasos, ilumine sus decisiones, proteja su corazón y la acompañe en cada nuevo camino que emprenda.
+                </p>
+
+                <p>
+                    Nunca olvide que su historia apenas comienza. Hay muchísimas páginas por escribir, lugares por conocer, personas por encontrar, sueños por cumplir y momentos que 
+                    todavía ni siquiera imagina.
+                </p>
+
+                <p>
+                    Hoy no solo celebra sus quince años. Celebra su vida, su crecimiento, sus sueños y la hermosa persona que es.
+                </p>
+
+                <p>
+                    Que estos quince años sean el comienzo de una vida llena de amor, bendiciones, aprendizajes, aventuras y sueños cumplidos.
+                </p>
+
+                <p>
+                    Feliz cumpleaños, hermosa quinceañera. 💕 Nunca deje de creer en usted, nunca deje de soñar y, sobre todo, nunca deje de ser usted.
+                </p>
+
+                <p>
+                    <strong>
+                    ¡Felices XV años, Sonia! 👑🎂
+                    </strong>
+                </p>
+
+                <div class="signature">
+                    Con mucho cariño ✨
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+        MIS XV
+    ================================= -->
+
+    <section id="momentos">
+
+        <h2 class="section-title">
+            Una nueva etapa 👑
+        </h2>
+
+        <p class="section-text">
+            15 años, una nueva historia y muchísimas
+            aventuras por vivir.
+        </p>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    👑
+                </div>
+
+                <h3>
+                    Mi gran día
+                </h3>
+
+                <p>
+                    Hoy celebro una etapa única
+                    e inolvidable de su vida.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    👗
+                </div>
+
+                <h3>
+                    Mis XV
+                </h3>
+
+                <p>
+                    Una noche especial que quedará
+                    guardada para siempre.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🎂
+                </div>
+
+                <h3>
+                    Un año más
+                </h3>
+
+                <p>
+                    Celebro todo lo que vivio y todo
+                    lo increíble que está por venir.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🎆
+                </div>
+
+                <h3>
+                    Lo que viene
+                </h3>
+
+                <p>
+                    Nuevos sueños, nuevas metas
+                    y muchas aventuras por descubrir.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+        NÚMEROS
+    ================================= -->
+
+    <section>
+
+        <h2 class="section-title">
+            15 años de magia ✨
+        </h2>
+
+        <p class="section-text">
+            Una celebración para recordar siempre.
+        </p>
+
+
+        <div class="numbers">
+
+            <div class="number-box">
+
+                <span>
+                    15
+                </span>
+
+                <small>
+                    Años
+                </small>
+
+            </div>
+
+
+            <div class="number-box">
+
+                <span>
+                    ∞
+                </span>
+
+                <small>
+                    Sueños
+                </small>
+
+            </div>
+
+
+            <div class="number-box">
+
+                <span>
+                    ∞
+                </span>
+
+                <small>
+                    Aventuras
+                </small>
+
+            </div>
+
+
+            <div class="number-box">
+
+                <span>
+                    ∞
+                </span>
+
+                <small>
+                    Momentos
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =================================
+        FINAL
+    ================================= -->
+
+    <section id="final">
+
+        <h2 class="section-title">
+            ¡Felices XV, Sonia! 👑
+        </h2>
+
+        <p class="section-text">
+            Que esta nueva etapa esté llena de sueños cumplidos,
+            aventuras increíbles y muchísimas razones para sonreír.
+        </p>
+
+        <button
+            class="btn"
+            onclick="celebrate()">
+
+            🎇 ¡Que comience la celebración!
+
+        </button>
+
+    </section>
+
+
+    <!-- =================================
+        FOOTER
+    ================================= -->
+
+    <footer>
+
+        ✨ Una noche para recordar ✨
+
+        <br><br>
+
+        <strong>
+            Sonia — XV años
+        </strong>
+
+        <br><br>
+
+        👑 🎂 👗 🎆 ✨
+
+    </footer>
+
+
+    <!-- =================================
+        JAVASCRIPT
+    ================================= -->
+
+    <script>
+
+        /* =================================
+        ESTRELLAS
+        ================================= */
+
+        const stars =
+            document.getElementById("stars");
+
+        for (
+            let i = 0;
+            i < 140;
+            i++
+        ) {
+
+            const star =
+                document.createElement("div");
+
+            star.className =
+                "star";
+
+            star.style.left =
+                Math.random() * 100 + "%";
+
+            star.style.top =
+                Math.random() * 100 + "%";
+
+            const size =
+                Math.random() * 3 + 1;
+
+            star.style.width =
+                size + "px";
+
+            star.style.height =
+                size + "px";
+
+            star.style.animationDelay =
+                Math.random() * 3 + "s";
+
+            star.style.animationDuration =
+                Math.random() * 2 + 1 + "s";
+
+            stars.appendChild(star);
+        }
+
+
+        /* =================================
+        CARTA
+        ================================= */
+
+        function openLetter() {
+
+            const letter =
+                document.getElementById("letter");
+
+            letter.classList.toggle("open");
+
+            if (
+                letter.classList.contains("open")
+            ) {
+
+                createFloating(
+                    15
+                );
+
+            }
+        }
+
+
+        function openLetterAndScroll() {
+
+            document
+                .getElementById("carta")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            setTimeout(() => {
+
+                const letter =
+                    document.getElementById("letter");
+
+                if (
+                    !letter.classList.contains("open")
+                ) {
+
+                    letter.classList.add("open");
+
+                    createFloating(15);
+
+                }
+
+            }, 700);
+        }
+
+
+        /* =================================
+        MÚSICA
+        ================================= */
+
+        const music =
+            document.getElementById("music");
+
+        const musicButton =
+            document.getElementById(
+                "musicButton"
+            );
+
+
+        function toggleMusic() {
+
+            if (music.paused) {
+
+                music.play()
+                    .then(() => {
+
+                        musicButton.innerHTML =
+                            "⏸️";
+
+                        musicButton.classList.add(
+                            "music-playing"
+                        );
+
+                    })
+                    .catch(() => {
+
+                        alert(
+                            "No se pudo reproducir la canción. Verifica que el archivo se llame cancion.mp3 y esté en la misma carpeta."
+                        );
+
+                    });
+
+            } else {
+
+                music.pause();
+
+                musicButton.innerHTML =
+                    "🎵";
+
+                musicButton.classList.remove(
+                    "music-playing"
+                );
+            }
+        }
+
+
+        /* =================================
+        ELEMENTOS FLOTANTES
+        ================================= */
+
+        function createFloating(
+            amount = 10
+        ) {
+
+            const symbols = [
+                "✨",
+                "⭐",
+                "🌟",
+                "👑",
+                "🎀",
+                "🦋"
+            ];
+
+            for (
+                let i = 0;
+                i < amount;
+                i++
+            ) {
+
+                setTimeout(() => {
+
+                    const item =
+                        document.createElement(
+                            "div"
+                        );
+
+                    item.className =
+                        "floating";
+
+                    item.innerHTML =
+                        symbols[
+                            Math.floor(
+                                Math.random() *
+                                symbols.length
+                            )
+                        ];
+
+                    item.style.left =
+                        Math.random() * 100 +
+                        "vw";
+
+                    item.style.fontSize =
+                        Math.random() * 20 +
+                        18 +
+                        "px";
+
+                    item.style.animationDuration =
+                        Math.random() * 3 +
+                        4 +
+                        "s";
+
+                    document.body.appendChild(
+                        item
+                    );
+
+                    setTimeout(() => {
+
+                        item.remove();
+
+                    }, 7000);
+
+                }, i * 120);
+            }
+        }
+
+
+        /* =================================
+        CONFETI
+        ================================= */
+
+        function celebrate() {
+
+            const colors = [
+                "#a855f7",
+                "#ec4899",
+                "#f5c2ff",
+                "#ffffff",
+                "#ffd166",
+                "#6366f1",
+                "#c084fc"
+            ];
+
+
+            for (
+                let i = 0;
+                i < 200;
+                i++
+            ) {
+
+                setTimeout(() => {
+
+                    const confetti =
+                        document.createElement(
+                            "div"
+                        );
+
+                    confetti.className =
+                        "confetti";
+
+                    confetti.style.left =
+                        Math.random() * 100 +
+                        "vw";
+
+                    confetti.style.background =
+                        colors[
+                            Math.floor(
+                                Math.random() *
+                                colors.length
+                            )
+                        ];
+
+                    confetti.style.width =
+                        Math.random() * 8 +
+                        5 +
+                        "px";
+
+                    confetti.style.height =
+                        Math.random() * 12 +
+                        8 +
+                        "px";
+
+                    confetti.style.animationDuration =
+                        Math.random() * 3 +
+                        3 +
+                        "s";
+
+                    document.body.appendChild(
+                        confetti
+                    );
+
+                    setTimeout(() => {
+
+                        confetti.remove();
+
+                    }, 7000);
+
+                }, i * 7);
+            }
+
+
+            createFloating(40);
+        }
+
+
+        /* =================================
+        ANIMACIÓN AUTOMÁTICA
+        ================================= */
+
+        setInterval(() => {
+
+            createFloating(1);
+
+        }, 3000);
+
+
+        /* =================================
+        EFECTO INICIAL
+        ================================= */
+
+        window.addEventListener(
+            "load",
+            () => {
+
+                setTimeout(() => {
+
+                    createFloating(10);
+
+                }, 1000);
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
